@@ -56,6 +56,15 @@ export class GuiModel {
                             "height": 4,
                             "maxLength": 5000,
                         },
+
+                        { 
+                            "id": "group",
+                            "type": "autocomplete",
+                            "name": "Group",
+                            "url": "/group",
+                            "form": "GroupForm",
+                            "width": 2 
+                        },
                         {
                             "type": "deleteButton",
                             "name": "Delete"
@@ -228,6 +237,17 @@ export class GuiModel {
                                 "form": "GroupForm"
                             }
                         },
+
+                        {
+                            "type": "list",
+                            "icon": "fa-weixin",
+                            "color": "wisteria",
+                            "search": true,
+                            "url": "/group",
+                            "form": {
+                            "form": "GroupForm"
+                            }
+                            },
                     ]
                 },
                 
