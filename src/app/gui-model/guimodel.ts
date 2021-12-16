@@ -193,6 +193,13 @@ export class GuiModel {
                             "color": "yellow",
                             "page": "locationspage",
                         },
+                        {
+                            "type": "button",
+                            "name": "Activity",
+                            "icon": "as fa-running",
+                            "color": "pink",
+                            "page": "activitypage",
+                        },
                     ]
                 },
                 {
@@ -275,6 +282,35 @@ export class GuiModel {
                             "url": "/location",
                             "form": {
                                 "form": "LocationForm"
+                            }
+                        },
+                    ]
+                },
+
+                {
+                    "id": "activitypage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewActivity",
+                            "icon": "fa-running",
+                            "color": "pink",
+                            "width": 2,
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-home",
+                            "color": "red",
+                            "search": true,
+                            "url": "/activity",
+                            "form": {
+                                "form": "ActivityForm"
                             }
                         },
                     ]
