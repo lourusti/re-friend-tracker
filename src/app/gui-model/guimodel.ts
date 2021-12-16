@@ -152,6 +152,20 @@ export class GuiModel {
                             "form": "ActivityForm",
                             "width": 2
                         },
+                        { 
+                            "id": "location",
+                            "type": "autocomplete",
+                            "name": "Location",
+                            "url": "/location",
+                            "form": "LocationForm",
+                            "width": 2 
+                        },
+                        {
+                            "id": "date",
+                            "type": "date",
+                            "name": "Date",
+                            "width": 2
+                        },
                         {
                             "type": "deleteButton",
                             "name": "Delete"
@@ -164,6 +178,7 @@ export class GuiModel {
                             "type": "okButton",
                             "name": "Ok"
                         }
+                        
                     ]
                 },
             ],
@@ -300,17 +315,17 @@ export class GuiModel {
                             "color": "pink",
                             "width": 2,
                             "form": {
-                                "form": "ActivityForm"
+                                "form": "AddActivityForm"
                             }
                         },
                         {
                             "type": "list",
-                            "icon": "fa-home",
+                            "icon": "fa-running",
                             "color": "red",
                             "search": true,
                             "url": "/activity",
                             "form": {
-                                "form": "ActivityForm"
+                                "form": "AddActivityForm"
                             }
                         },
                     ]
