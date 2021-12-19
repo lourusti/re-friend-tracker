@@ -205,6 +205,46 @@ export class GuiModel {
                         
                     ]
                 },
+
+                {
+                    "id": "AddoActivityForm",
+                    "title": "Activity",
+                    "url": "/friend/:friendKey/activity",
+                    "formFieldList": [
+                        {
+                            "id":   "activity",
+                            "type": "autocomplete",
+                            "name": "Activity",
+                            "url": "/activity",
+                            "defaultKey": "activityKey",
+                            "readonly": true,
+                            "form": "ActivityForm",
+                            "width": 2
+                        },
+                        
+                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                        
+                    ]
+                },
             ],
             "pageList": [
                 {
@@ -262,10 +302,35 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
+                            "page": "friendpage"
+                        },
+                    ]
+                },
+                {
+                    "id": "friendpage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditFriend",
+                            "icon": "fa-user",
+                            "color": "pink",
                             "form": {
                                 "form": "FriendForm"
                             }
                         },
+                        {
+                            "type": "button",
+                            "name": "AddActivity",
+                            "icon": "fa-user",
+                            "color": "pink",
+                            "form": {
+                                "form": "AddoActivityForm"
+                            }
+                        },
+                        
                     ]
                 },
                 {
